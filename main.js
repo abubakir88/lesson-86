@@ -36,12 +36,16 @@ var typePosition = document.getElementById("typePosition");
 var salaryPupil = document.getElementById("salaryPupil");
 var formModal = document.querySelector(".modal");
 var searchInput = document.getElementById("search");
-var filterPosition = document.getElementById("filterPosition");
-var filterCity = document.getElementById("filterCity");
+// const filterPosition: HTMLSelectElement | null = document.getElementById(
+//   "filterPosition"
+// ) as HTMLSelectElement;
+// const filterCity: HTMLSelectElement | null = document.getElementById(
+//   "filterCity"
+// ) as HTMLSelectElement;
 var selected = null;
 var getRow = function (_a) {
     var id = _a.id, firstName = _a.firstName, lastName = _a.lastName, city = _a.city, date = _a.date, position = _a.position, typeposition = _a.typeposition, salary = _a.salary, isMarried = _a.isMarried;
-    return "\n    <tr>\n      <th scope=\"row\">".concat(id, "</th>\n      <td>").concat(firstName, "</td>\n      <td>").concat(lastName, "</td>\n      <td>").concat(city, "</td>  \n      <td>").concat(date, "</td>\n      <td>").concat(position, "</td>\n      <td>").concat(typeposition, "</td>\n      <td>").concat(salary, "</td>\n      <td>").concat(isMarried ? "Ha" : "Yo'q", "</td>\n      <td class = \"text-end\">\n        <button class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#pupilModal\" onclick=\"editPupil(").concat(id, ")\">Edit</button>\n        <button class=\"btn btn-danger\" onclick=\"deletePupil(").concat(id, ")\">Delete</button>\n      </td>\n      </tr>\n      ");
+    return "\n    <tr>\n      <th scope=\"row\">".concat(id, "</th>\n      <td>").concat(firstName, "</td>\n      <td>").concat(lastName, "</td>\n      <td>").concat(city, "</td>  \n      <td>").concat(date, "</td>\n      <td>").concat(position, "</td>\n      <td>").concat(typeposition, "</td>\n      <td>").concat(salary, "</td>\n      <td>").concat(isMarried ? "Ha" : "Yo'q", "</td>\n      <td class = \"text-end\">\n        <button class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#pupiLModal\" onclick=\"EditPupil(").concat(id, ")\">Edit</button>\n        <button class=\"btn btn-danger\" onclick=\"deletePupil(").concat(id, ")\">Delete</button>\n      </td>\n      </tr>\n      ");
 };
 if (pupilCity) {
     City.forEach(function (city) {

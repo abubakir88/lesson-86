@@ -40,12 +40,12 @@ const formModal: HTMLElement | null = document.querySelector(".modal");
 const searchInput: HTMLInputElement | null = document.getElementById(
   "search"
 ) as HTMLInputElement;
-const filterPosition: HTMLSelectElement | null = document.getElementById(
-  "filterPosition"
-) as HTMLSelectElement;
-const filterCity: HTMLSelectElement | null = document.getElementById(
-  "filterCity"
-) as HTMLSelectElement;
+// const filterPosition: HTMLSelectElement | null = document.getElementById(
+//   "filterPosition"
+// ) as HTMLSelectElement;
+// const filterCity: HTMLSelectElement | null = document.getElementById(
+//   "filterCity"
+// ) as HTMLSelectElement;
 
 let selected: any = null;
 
@@ -84,7 +84,7 @@ const getRow = ({
       <td>${salary}</td>
       <td>${isMarried ? "Ha" : "Yo'q"}</td>
       <td class = "text-end">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pupilModal" onclick="editPupil(${id})">Edit</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pupiLModal" onclick="EditPupil(${id})">Edit</button>
         <button class="btn btn-danger" onclick="deletePupil(${id})">Delete</button>
       </td>
       </tr>
